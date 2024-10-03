@@ -138,3 +138,11 @@ NX allow us to [visualize](https://nx.dev/nx-api/nx/documents/show) the tasks, i
 ```
 yarn run nx show project angular-monorepo-e2e --web
 ```
+
+## CI workflow with Github
+
+It creates a base file with
+
+```
+nx generate ci-workflow --ci=github
+```

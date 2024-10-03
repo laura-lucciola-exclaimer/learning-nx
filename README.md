@@ -83,6 +83,34 @@ yarn run nx e2e angular-monorepo-e2e
 Notice this abstracts which e2e runner it is, but I still had to install playright separatedelly with
 `yarn playwright install`
 
+### Running only the affected projects
+
+For running tests only for the new changes since the last commit:
+
+```
+yarn run nx affected -t test
+```
+
+And to display the changes:
+
+```
+yarn run nx graph --affected
+```
+
+### Running multiple tasks in parallel
+
+Can run all the tests and lint, for example
+
+```
+yarn run nx run-many -t test lint e2e
+```
+
+For deploying the entire monorepo, in production mode:
+
+```
+yarn run nx run-many -t build
+```
+
 ## Resetting NX
 
 Sometimes NX will not run and you will need to reset it with
@@ -93,10 +121,20 @@ yarn run nx reset
 
 If you know where the problem is, you can use the specific [flag](https://nx.dev/nx-api/nx/documents/reset) for it.
 
-## NX Dependency graph
+## NX architecture
+
+### NX Dependency graph
 
 NX allow us to visualize the dependencies between apps and libraries via:
 
 ```
 yarn run nx graph
+```
+
+### NX tasks
+
+NX allow us to visualize the tasks, instead of reading them directly from the configuration files with
+
+```
+yarn run nx show project angular-monorepo-e2e --web
 ```

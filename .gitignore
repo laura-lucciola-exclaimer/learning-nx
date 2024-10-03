@@ -160,7 +160,6 @@ out
 .yarn/install-state.gz
 .pnp.*
 
-.yarn
 .vscode
 
 .nx/cache

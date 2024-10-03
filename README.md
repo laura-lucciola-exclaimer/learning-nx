@@ -66,13 +66,32 @@ It's important to notice they will be located in `libs/` and the way that the an
 The individual library components can be served via router in `angular-monorepo\apps\angular-monorepo\src\app\app.routes.ts`.  
 You can also use the Angular selector, e.g.: `angular-monorepo\apps\inventory\src\app\app.component.ts`.
 
+## Testing the monorepo
+
+To run the unit tests:
+
+```
+yarn run nx test angular-monorepo
+```
+
+To run the e2e tests:
+
+```
+yarn run nx e2e angular-monorepo-e2e
+```
+
+Notice this abstracts which e2e runner it is, but I still had to install playright separatedelly with
+`yarn playwright install`
+
 ## Resetting NX
 
-Sometimes NX will not run and you will need to reset its cache with
+Sometimes NX will not run and you will need to reset it with
 
 ```
 yarn run nx reset
 ```
+
+If you know where the problem is, you can use the specific [flag](https://nx.dev/nx-api/nx/documents/reset) for it.
 
 ## NX Dependency graph
 

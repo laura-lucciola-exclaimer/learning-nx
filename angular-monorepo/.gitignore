@@ -1,3 +1,36 @@
+# compiled output
+dist
+tmp
+/out-tsc
+# dependencies
+node_modules
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# misc
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+testem.log
+/typings
+# System Files
+.DS_Store
+Thumbs.db
+.nx/cache
+.nx/workspace-data
+.angular
+
 # Logs
 logs
 *.log
@@ -89,7 +122,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -102,7 +134,6 @@ dist
 
 # vuepress v2.x temp and cache directory
 .temp
-.cache
 
 # Docusaurus cache and generated files
 .docusaurus
@@ -132,7 +163,7 @@ dist
 .yarn
 .vscode
 
-**/.nx/**
+.nx/cache
+.nx/workspace-data
 
 .angular
-

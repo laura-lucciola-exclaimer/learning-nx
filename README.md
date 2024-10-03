@@ -36,6 +36,8 @@ yarn run nx list @nx/angular
 
 ## Create new items with NX
 
+### New application
+
 In the previous section, the list command will display the [generators](https://nx.dev/nx-api/nx/documents/generate).
 For creating a new application, for example:
 
@@ -50,4 +52,22 @@ Plus used the following interactive options:
 
 √ Which bundler do you want to use to build the application? · esbuild
 √ What should be the project name and where should it be generated? · inventory @ apps/inventory
+```
+
+### New library
+
+In order to share and reuse items, NX allows us to create standalone libraries:
+
+```
+yarn run nx g @nx/angular:library products --directory=libs/products --standalone --dry-run
+```
+
+It's important to notice they will be located in `libs/` and the way that the angular monorepo will interact with it is by being defined in: `angular-monorepo\tsconfig.base.json`
+
+## Resetting NX
+
+Sometimes NX will not run and you will need to reset its cache with
+
+```
+yarn run nx reset
 ```

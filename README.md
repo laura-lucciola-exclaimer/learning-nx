@@ -133,7 +133,7 @@ yarn run nx graph
 
 ### NX tasks
 
-NX allow us to visualize the tasks, instead of reading them directly from the configuration files with
+NX allow us to [visualize](https://nx.dev/nx-api/nx/documents/show) the tasks, instead of reading them directly from the configuration files with
 
 ```
 yarn run nx show project angular-monorepo-e2e --web

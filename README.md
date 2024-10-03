@@ -1,18 +1,18 @@
 # learning-nx
 
-Learning NX and Github Actions for +1/Curiosity Week (Q1 - FY25) . This week will run 02/10/24 - 07/10/24
+Learning NX and GitHub Actions for +1/Curiosity Week (Q1 - FY25). This week will run from 02/10/24 to 07/10/24.
 
 ## Setting up a monorepo Angular project
 
-Following the NX commands [here](https://nx.dev/nx-api/nx/documents/create-nx-workspace)
+Following the NX commands [here](https://nx.dev/nx-api/nx/documents/create-nx-workspace).
 
 I used this command to create the project:
 
-```
+```sh
 yarn global add nx@latest
 ```
 
-```
+```sh
 yarn create nx-workspace angular-monorepo --preset=angular-monorepo --e2eTestRunner=playwright --name=learning-nx --nxCloud=skip --skipGit=true --ssr=true --useGitHub=true --packageManager=yarn
 ```
 
@@ -28,9 +28,9 @@ Plus used the following interactive options:
 
 ## Listing NX commands
 
-To display them run
+To display them, run:
 
-```
+```sh
 yarn run nx list @nx/angular
 ```
 
@@ -41,7 +41,7 @@ yarn run nx list @nx/angular
 In the previous section, the list command will display the [generators](https://nx.dev/nx-api/nx/documents/generate).
 For creating a new application, for example:
 
-```
+```sh
 yarn run nx g @nx/angular:app inventory --directory=apps/inventory --ssr=true --dry-run
 ```
 
@@ -58,11 +58,11 @@ Plus used the following interactive options:
 
 In order to share and reuse items, NX allows us to create standalone libraries:
 
-```
+```sh
 yarn run nx g @nx/angular:library products --directory=libs/products --standalone --dry-run
 ```
 
-It's important to notice they will be located in `libs/` and the way that the angular monorepo will interact with it is by being defined in: `angular-monorepo\tsconfig.base.json`.  
+It's important to note they will be located in `libs/` and the way that the Angular monorepo will interact with it is by being defined in: `angular-monorepo\tsconfig.base.json`.  
 The individual library components can be served via router in `angular-monorepo\apps\angular-monorepo\src\app\app.routes.ts`.  
 You can also use the Angular selector, e.g.: `angular-monorepo\apps\inventory\src\app\app.component.ts`.
 
@@ -70,52 +70,55 @@ You can also use the Angular selector, e.g.: `angular-monorepo\apps\inventory\sr
 
 To run the unit tests:
 
-```
+```sh
 yarn run nx test angular-monorepo
 ```
 
 To run the e2e tests:
 
-```
+```sh
 yarn run nx e2e angular-monorepo-e2e
 ```
 
-Notice this abstracts which e2e runner it is, but I still had to install playright separatedelly with
-`yarn playwright install`
+Note that this abstracts which e2e runner it is, but I still had to install Playwright separately with:
+
+```sh
+yarn playwright install
+```
 
 ### Running only the affected projects
 
 For running tests only for the new changes since the last commit:
 
-```
+```sh
 yarn run nx affected -t test
 ```
 
 And to display the changes:
 
-```
+```sh
 yarn run nx graph --affected
 ```
 
 ### Running multiple tasks in parallel
 
-Can run all the tests and lint, for example
+You can run all the tests and lint, for example:
 
-```
+```sh
 yarn run nx run-many -t test lint e2e
 ```
 
-For deploying the entire monorepo, in production mode:
+For deploying the entire monorepo in production mode:
 
-```
+```sh
 yarn run nx run-many -t build
 ```
 
 ## Resetting NX
 
-Sometimes NX will not run and you will need to reset it with
+Sometimes NX will not run and you will need to reset it with:
 
-```
+```sh
 yarn run nx reset
 ```
 
@@ -125,24 +128,24 @@ If you know where the problem is, you can use the specific [flag](https://nx.dev
 
 ### NX Dependency graph
 
-NX allow us to visualize the dependencies between apps and libraries via:
+NX allows us to visualize the dependencies between apps and libraries via:
 
-```
+```sh
 yarn run nx graph
 ```
 
 ### NX tasks
 
-NX allow us to [visualize](https://nx.dev/nx-api/nx/documents/show) the tasks, instead of reading them directly from the configuration files with
+NX allows us to [visualize](https://nx.dev/nx-api/nx/documents/show) the tasks, instead of reading them directly from the configuration files with:
 
-```
+```sh
 yarn run nx show project angular-monorepo-e2e --web
 ```
 
-## CI workflow with Github
+## CI workflow with GitHub
 
-It creates a base file with
+It creates a base file with:
 
-```
+```sh
 nx generate ci-workflow --ci=github
 ```

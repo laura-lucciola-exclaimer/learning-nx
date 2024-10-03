@@ -24,11 +24,15 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install Yarn
+        run: npm install -g yarn
+        shell: bash
+
       - name: Cache dependencies
         id: cache
         uses: actions/cache@v4
         with:
-          path: ./node_modules
+          path: ./
           key: modules-${{ hashFiles('yarn.lock') }}
 
       - name: Install dependencies

@@ -62,7 +62,9 @@ In order to share and reuse items, NX allows us to create standalone libraries:
 yarn run nx g @nx/angular:library products --directory=libs/products --standalone --dry-run
 ```
 
-It's important to notice they will be located in `libs/` and the way that the angular monorepo will interact with it is by being defined in: `angular-monorepo\tsconfig.base.json`
+It's important to notice they will be located in `libs/` and the way that the angular monorepo will interact with it is by being defined in: `angular-monorepo\tsconfig.base.json`.  
+The individual library components can be served via router in `angular-monorepo\apps\angular-monorepo\src\app\app.routes.ts`.  
+You can also use the Angular selector, e.g.: `angular-monorepo\apps\inventory\src\app\app.component.ts`.
 
 ## Resetting NX
 
@@ -70,4 +72,12 @@ Sometimes NX will not run and you will need to reset its cache with
 
 ```
 yarn run nx reset
+```
+
+## NX Dependency graph
+
+NX allow us to visualize the dependencies between apps and libraries via:
+
+```
+yarn run nx graph
 ```

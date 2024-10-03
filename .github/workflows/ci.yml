@@ -28,15 +28,15 @@ jobs:
         run: npm install -g yarn
         shell: bash
 
-      # - name: Cache dependencies
-      #   id: cache
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ./
-      #     key: modules-${{ hashFiles('yarn.lock') }}
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ./
+          key: modules-${{ hashFiles('yarn.lock') }}
 
       - name: Install dependencies
-        # if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
         shell: bash
 

@@ -161,7 +161,7 @@ yarn run nx add @nx/storybook@19.8.3
 ### Adding storybook stories into an existing component
 
 ```sh
-nx g @nx/angular:storybook-configuration angular-monorepo
+yarn run nx g @nx/angular:storybook-configuration angular-monorepo
 ```
 
 ```sh

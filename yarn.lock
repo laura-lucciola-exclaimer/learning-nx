@@ -4023,7 +4023,7 @@
     rehype-slug "^6.0.0"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-essentials@^8.2.8":
+"@storybook/addon-essentials@8.3.4":
   version "8.3.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-8.3.4.tgz#2260cc927b6f5aa2cfc89ec233f918e158d95df5"
   integrity sha512-C3+3hpmSn/8zdx5sXEP0eE6zMzxgRosHVZYfe9nBcMiEDp6UKVUyHVetWxEULOEgN46ysjcpllZ0bUkRYxi2IQ==
@@ -4085,7 +4085,7 @@
   dependencies:
     memoizerific "^1.11.3"
 
-"@storybook/angular@^8.2.8":
+"@storybook/angular@8.3.4":
   version "8.3.4"
   resolved "https://registry.yarnpkg.com/@storybook/angular/-/angular-8.3.4.tgz#779681b041f0ee5053189eaedf2e9e4ed7580f23"
   integrity sha512-EU09yE4L8sXU/nrenLJQScNpxg7dWF3ausrFIQtLllvji5tkH2H4Dx7sQ66XZRWmOtjGxnerZHRhtsUDk3F2LA==
@@ -4224,7 +4224,7 @@
   dependencies:
     ts-dedent "^2.0.0"
 
-"@storybook/core-server@^8.2.8":
+"@storybook/core-server@8.3.4":
   version "8.3.4"
   resolved "https://registry.yarnpkg.com/@storybook/core-server/-/core-server-8.3.4.tgz#3c0787051813bb6a151abb014e834f9e91aef5fe"
   integrity sha512-J+aro/gvnVBlKOsfFjt5ZdMD5gcvWV+b+1H9UMMZKDtJgZspf+zHwdIUAMsIo3s/GuGzDqhB/pBKtqOQYJKamQ==

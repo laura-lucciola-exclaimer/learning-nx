@@ -149,3 +149,25 @@ It creates a base file with:
 ```sh
 nx generate ci-workflow --ci=github
 ```
+
+## Storybook
+
+Using the NX plugin for [storybook](https://storybook.js.org/).
+
+```sh
+yarn run nx add @nx/storybook@19.8.3
+```
+
+### Adding storybook stories into an existing component
+
+```sh
+nx g @nx/angular:storybook-configuration angular-monorepo
+```
+
+```sh
+NX  Generating @nx/angular:storybook-configuration
+
+√ Do you want to set up Storybook interaction tests? (Y/n) · true
+√ Automatically generate *.stories.ts files for components declared in this project? (Y/n) · true
+√ Configure a static file server for the storybook instance? (Y/n) · true
+```

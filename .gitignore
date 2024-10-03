@@ -131,3 +131,8 @@ dist
 
 .yarn
 .vscode
+
+**/.nx/**
+
+.angular
+

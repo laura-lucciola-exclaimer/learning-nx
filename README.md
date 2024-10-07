@@ -171,3 +171,24 @@ NX  Generating @nx/angular:storybook-configuration
 √ Automatically generate *.stories.ts files for components declared in this project? (Y/n) · true
 √ Configure a static file server for the storybook instance? (Y/n) · true
 ```
+### Adding storybook stories into an existing project
+
+```sh
+yarn run nx g @nx/angular:stories --project=shared-ui
+```
+
+```sh
+ NX  Generating @nx/angular:stories
+
+√ Do you want to set up Storybook interaction tests? (Y/n) · false
+
+CREATE libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts
+```
+
+### Using compodoc with storybook to write embedded documentations
+
+First add the package to a project with storybook with
+```sh
+
+yarn add -D @compodoc/compodoc
+```

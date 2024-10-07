@@ -192,3 +192,4 @@ First add the package to a project with storybook with
 
 yarn add -D @compodoc/compodoc
 ```
+Then follow the configuration steps in [here](https://nx.dev/recipes/storybook/angular-storybook-compodoc).

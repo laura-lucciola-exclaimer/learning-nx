@@ -34,16 +34,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<SharedUiComponent>",
-                "defaultValue": "{\n  component: SharedUiComponent,\n  title: 'SharedUiComponent',\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "libs/shared/ui/src/lib/test-button/test-button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -51,14 +41,14 @@
                 "defaultValue": "{\n  component: TestButtonComponent,\n  title: 'TestButtonComponent',\n}"
             },
             {
-                "name": "Primary",
+                "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {},\n}"
+                "type": "Meta<SharedUiComponent>",
+                "defaultValue": "{\n  component: SharedUiComponent,\n  title: 'SharedUiComponent',\n}"
             },
             {
                 "name": "Primary",
@@ -69,6 +59,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    text: 'Primary',\n    padding: 10,\n    disabled: false,\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {},\n}"
             },
             {
                 "name": "Secondary",
@@ -87,8 +87,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<SharedUiComponent>",
-                "file": "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts",
+                "rawtype": "StoryObj<TestButtonComponent>",
+                "file": "libs/shared/ui/src/lib/test-button/test-button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -98,8 +98,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TestButtonComponent>",
-                "file": "libs/shared/ui/src/lib/test-button/test-button.component.stories.ts",
+                "rawtype": "StoryObj<SharedUiComponent>",
+                "file": "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -188,19 +188,6 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<SharedUiComponent>",
-                    "file": "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "libs/shared/ui/src/lib/test-button/test-button.component.stories.ts": [
                 {
                     "name": "Story",
@@ -208,6 +195,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TestButtonComponent>",
                     "file": "libs/shared/ui/src/lib/test-button/test-button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SharedUiComponent>",
+                    "file": "libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

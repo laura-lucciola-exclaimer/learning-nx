@@ -97,7 +97,9 @@
         "port": 4400,
         "configDir": "apps/inventory/.storybook",
         "browserTarget": "inventory:build",
-        "compodoc": false
+        "compodoc": true,
+        "compodocArgs": ["-e", "json", "-d", "apps/inventory"]
+
       },
       "configurations": {
         "ci": {
@@ -112,7 +114,7 @@
         "outputDir": "dist/storybook/inventory",
         "configDir": "apps/inventory/.storybook",
         "browserTarget": "inventory:build",
-        "compodoc": false
+        "compodoc": true
       },
       "configurations": {
         "ci": {

@@ -166,3 +166,5 @@ out
 .nx/workspace-data
 
 .angular
+
+storybook-static

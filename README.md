@@ -149,3 +149,47 @@ It creates a base file with:
 ```sh
 nx generate ci-workflow --ci=github
 ```
+
+## Storybook
+
+Using the NX plugin for [storybook](https://storybook.js.org/).
+
+```sh
+yarn run nx add @nx/storybook@19.8.3
+```
+
+### Adding storybook stories into an existing component
+
+```sh
+yarn run nx g @nx/angular:storybook-configuration angular-monorepo
+```
+
+```sh
+NX  Generating @nx/angular:storybook-configuration
+
+√ Do you want to set up Storybook interaction tests? (Y/n) · true
+√ Automatically generate *.stories.ts files for components declared in this project? (Y/n) · true
+√ Configure a static file server for the storybook instance? (Y/n) · true
+```
+### Adding storybook stories into an existing project
+
+```sh
+yarn run nx g @nx/angular:stories --project=shared-ui
+```
+
+```sh
+ NX  Generating @nx/angular:stories
+
+√ Do you want to set up Storybook interaction tests? (Y/n) · false
+
+CREATE libs/shared/ui/src/lib/shared-ui/shared-ui.component.stories.ts
+```
+
+### Using compodoc with storybook to write embedded documentations
+
+First add the package to a project with storybook with
+```sh
+
+yarn add -D @compodoc/compodoc
+```
+Then follow the configuration steps in [here](https://nx.dev/recipes/storybook/angular-storybook-compodoc).
